@@ -1,7 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
 
 :root {
     --primary-color: black;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    max-width: 800px;
+    margin: auto;
 }
 
 h1, h2, h3, div, main, nav, p, section {
@@ -9,16 +15,16 @@ h1, h2, h3, div, main, nav, p, section {
     padding: 0;
 }
 
-#home h1 {
-    text-align: center;
-/*    font-family: 'Roboto', sans-serif;
-    font-size: 5 rem; */
-}
-
-#home div.baner p {
+header div.bunner h1 {
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    font-size: 3 rem;
+    font-size: 1rem;
+}
+
+#home h3 {
+    text-align: center;
+   font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
 }
 
 header nav ul {
@@ -26,10 +32,38 @@ header nav ul {
     padding: 0;
     list-style-type: none;
     justify-content: space-around;
+    align-items: center;
 }
 
 header nav ul li a {
     text-decoration: none;
     text-transform: uppercase;
     color: var(--primary-color);
+}
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/*
+@media (min-width: 450px) {
+    header nav ul {
+        flex: 1;
     }
+}
+*/
+
+
+header .banner {
+    background-image: url(../img/house.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+header div img {
+    display: flex;
+    justify-content: center;
+}
