@@ -2,6 +2,7 @@
 
 :root {
     --primary-color: black;
+    --secondary-color: orange;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -15,16 +16,27 @@ h1, h2, h3, div, main, nav, p, section {
     padding: 0;
 }
 
-header div.bunner h1 {
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
+body header div img {
+    display: block;
+    width: 100%;
 }
 
-#home h3 {
+body footer div img {
+    display: block;
+    width: 100%;
+}
+
+header div.banner h1{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+}
+
+#home .motto h2 {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
+    color: var(--secondary-color);
 }
 
 header nav ul {
@@ -45,13 +57,17 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
-/*
-@media (min-width: 450px) {
-    header nav ul li{
-        flex: 1;
+
+@media (max-width: 370px) {
+    #home .motto h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 1.5rem;
+        margin: -80px;
     }
 }
-*/
 
 
 header .banner {
@@ -61,10 +77,11 @@ header .banner {
     min-height: 350px;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: baseline;
+    color: var(--secondary-color);
 }
 
-div img {
+.head img {
     display: flex;
     justify-content: center;
 }
