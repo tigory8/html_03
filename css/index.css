@@ -49,7 +49,7 @@ header nav ul {
 
 header nav ul li a {
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: downcase;
     color: var(--primary-color);
 }
 
@@ -69,6 +69,13 @@ header nav ul li a:hover {
     }
 }
 
+@media (min-width: 420px) {
+    header nav ul li a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: var(--primary-color);
+    }
+}
 
 header .banner {
     background-image: url(../img/house.jpg);
