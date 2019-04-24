@@ -6,7 +6,7 @@
 }
 
 body {
-    max-width: 800px;
+    max-width: 980px;
     margin: auto;
 }
 
@@ -23,8 +23,8 @@ header div.bunner h1 {
 
 #home h3 {
     text-align: center;
-   font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
 }
 
 header nav ul {
@@ -40,13 +40,14 @@ header nav ul li a {
     text-transform: uppercase;
     color: var(--primary-color);
 }
+
 header nav ul li a:hover {
     text-decoration: underline;
 }
 
 /*
 @media (min-width: 450px) {
-    header nav ul {
+    header nav ul li{
         flex: 1;
     }
 }
@@ -63,7 +64,7 @@ header .banner {
     align-items: flex-start;
 }
 
-header div img {
+div img {
     display: flex;
     justify-content: center;
 }
