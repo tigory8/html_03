@@ -8,7 +8,7 @@
 
 body {
     max-width: 980px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 h1, h2, h3, div, main, nav, p, section {
@@ -57,6 +57,67 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
+/*.wrap {
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+
+ .grid div.g-box img {
+    display: flex;
+    width: 30%;
+    flex-wrap: wrap;
+}
+
+#home .grid {
+    display: grid;
+    grid-columns: 50px 250px;
+    grid-row-gap: 10px;
+    border: 1px solid black;
+}
+
+ .grid div.g-box {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding:  8 px, 15px;
+    font-size: 18px;
+} 
+
+.grid div . g-box {
+
+} */
+
+
+.g-box {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 150%;
+}
+
+.g-box:nth-child(even) {
+  background-color: #ccc;
+  color: #000;
+  text-align: center;
+}
+
+.g-box:nth-child(odd) img {
+  display: flex;
+  justify-content: flex-end;
+  margin: auto;
+  height: 50px;
+  width: 50px;
+}
+
+
+.grid {
+  width: auto;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2 50px, 150px);
+}
+
+
 
 @media (max-width: 370px) {
     #home .motto h2 {
@@ -65,7 +126,7 @@ header nav ul li a:hover {
         align-items: center;
         text-align: center;
         font-size: 1.5rem;
-        margin: -80px;
+        margin: 0px 0;
     }
 }
 
