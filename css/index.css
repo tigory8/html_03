@@ -120,19 +120,32 @@ header nav ul li a:hover {
   width: 50px;
 }
 
-
+@media (min-width: 470px) {
 .grid {
-  width: auto;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 50px, 150px;
+  grid-template-columns: repeat(2, 0.75fr 2.25fr);
   flex-wrap: wrap;
+ }
 }
+
+
 
 figcaption {
      text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
+}
+
+
+@media (max-width: 469px) {
+.grid {
+  width: auto;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 100px 1fr;
+  flex-wrap: wrap;
+ }
 }
 
 @media (max-width: 370px) {
