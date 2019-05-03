@@ -126,6 +126,7 @@ header nav ul li a:hover {
   grid-gap: 10px;
   grid-template-columns: repeat(2, 0.75fr 2.25fr);
   flex-wrap: wrap;
+  margin: 10px 10px;
  }
 }
 
@@ -145,6 +146,7 @@ figcaption {
   grid-gap: 10px;
   grid-template-columns: 100px 1fr;
   flex-wrap: wrap;
+  margin: 10px 10px;
  }
 }
 
