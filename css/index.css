@@ -68,6 +68,34 @@ header nav ul li a:hover {
     font-size: 1.1rem;
 }
 
+header .banner {
+    background-image: url(../img/house.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    color: var(--secondary-color);
+}
+
+figcaption {
+     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+#products figure img {
+    display: block;
+    width: 100%;
+}
+
+#contact .map img{
+    display: block;
+    width: 100%; 
+    padding: 10px;
+} 
+
 /*.wrap {
     display: flex;
     flex-wrap: wrap;
@@ -99,14 +127,14 @@ header nav ul li a:hover {
 } */
 
 
-.g-box {
+.grid .g-box {
   border: 1px solid black;
   border-radius: 5px;
   padding: 5px;
   font-size: 130%;
 }
 
-.g-box:nth-child(even) {
+.grid .g-box:nth-child(even) {
   background-color: #ccc;
   color: #000;
   display: flex;
@@ -115,7 +143,7 @@ header nav ul li a:hover {
   text-align: center;
 }
 
-.g-box:nth-child(odd) img {
+.grid .g-box:nth-child(odd) img {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,6 +151,17 @@ header nav ul li a:hover {
   margin: auto;
   height: 50px;
   width: 50px;
+}
+
+@media (max-width: 509px) {
+#home .grid {
+  width: auto;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 100px 1fr;
+  flex-wrap: wrap;
+  margin: 10px 10px;
+ }
 }
 
 @media (min-width: 510px) {
@@ -136,27 +175,57 @@ header nav ul li a:hover {
 }
 
 
-
-figcaption {
-     text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-}
-
-
-@media (max-width: 509px) {
-.grid {
-  width: auto;
+@media (min-width: 600px) {
+#contact .grid-cont {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: repeat(2, 0.5fr 2.5fr);
   flex-wrap: wrap;
-  margin: 10px 10px;
+  margin: 5px 5px;
  }
 }
 
+
+@media (max-width: 600px) {
+#contact .grid-cont {
+  width: auto;    
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 40px 1fr;
+  flex-wrap: wrap;
+  margin: 3px 3px;
+ }
+}
+
+.grid-cont .c-box {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 2px;
+  font-size: 90%;
+}
+
+.grid-cont .c-box:nth-child(even) {
+  background-color: #ccc;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.grid-cont .c-box:nth-child(odd) img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  height: 30px;
+  width: 30px;
+}
+
+
 @media (max-width: 370px) {
-    #home .motto h2 {
+#home .motto h2 {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -175,22 +244,13 @@ figcaption {
     }
 }
 
-header .banner {
-    background-image: url(../img/house.jpg);
-    background-size: cover;
-    background-position: center;
-    min-height: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    color: var(--secondary-color);
-}
 
-.head img {
+
+/*  .head img {
     display: flex;
     justify-content: center;
 }
-
+*/
 
 body footer div img {
     display: block;
