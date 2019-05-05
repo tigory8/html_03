@@ -51,7 +51,7 @@ header nav ul {
 
 header nav ul li a {
     text-decoration: none;
-    text-transform: downcase;
+    text-transform: capitalize;
     color: var(--primary-color);
 }
 
@@ -92,8 +92,8 @@ figcaption {
 
 #contact .map img{
     display: block;
-    width: 100%; 
-    padding: 10px;
+    width: 90%; 
+    padding: 5px;
 } 
 
 /*.wrap {
@@ -231,7 +231,7 @@ figcaption {
         align-items: center;
         text-align: center;
         font-size: 1.5rem;
-        margin: 0px 0;
+        margin: 0px 0px;
         background-color: #F5F0DD;
     }
 }
@@ -261,6 +261,5 @@ body footer p {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: 0.9rem;
-    color: var(--primaary-color);
 }
 
