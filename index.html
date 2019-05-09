@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
     <title>Brone doors</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
@@ -41,6 +42,8 @@
         <section id="home">
             <div class="motto">
                 <h2>Our doors will make your life safer and more comfortable!</h2>
+                <div class="clock"></div>
+            <button class="clockToggle">Hide Clock</button>
             </div>
             <div class="grid">
                 <div class="g-box box1">
@@ -136,6 +139,18 @@
                 </fieldset>
             </form>
         </div>
+         <section>
+        <h1>Approximate cost calculation of door</h1>
+        <form class="converter">
+            <label>
+                Result: <input type="text" name="resultOfCalculation">
+            <label>
+                <output type="text" name="curr-converted"></output>
+            </label>
+            <br>
+            <button class="exchange-rate">UAH to selected currency</button>
+        </form>
+    </section>
     </main>
     <footer>
         <p><span>Published 20 April 2019</span></p>
@@ -143,6 +158,7 @@
             <img src="img/footer.png" alt="Footer">
         </div>
     </footer>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
