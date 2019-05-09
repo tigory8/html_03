@@ -11,7 +11,14 @@ body {
     margin: 0 auto;
 }
 
-h1, h2, h3, div, main, nav, p, section {
+h1,
+h2,
+h3,
+div,
+main,
+nav,
+p,
+section {
     margin: 0;
     padding: 0;
 }
@@ -22,7 +29,7 @@ body header div img {
 }
 
 
-header div.banner h1{
+header div.banner h1 {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: 2rem;
@@ -80,7 +87,7 @@ header .banner {
 }
 
 figcaption {
-     text-align: center;
+    text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
 }
@@ -90,142 +97,112 @@ figcaption {
     width: 100%;
 }
 
-#contact .map img{
+#contact .map img {
     display: block;
-    width: 90%; 
+    width: 90%;
     padding: 5px;
-} 
-
-/*.wrap {
-    display: flex;
-    flex-wrap: wrap;
-} 
-
-
- .grid div.g-box img {
-    display: flex;
-    width: 30%;
-    flex-wrap: wrap;
 }
-
-#home .grid {
-    display: grid;
-    grid-columns: 50px 250px;
-    grid-row-gap: 10px;
-    border: 1px solid black;
-}
-
- .grid div.g-box {
-    border: 1px solid black;
-    border-radius: 5px;
-    padding:  8 px, 15px;
-    font-size: 18px;
-} 
-
-.grid div . g-box {
-
-} */
 
 
 .grid .g-box {
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 5px;
-  font-size: 130%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 130%;
 }
 
 .grid .g-box:nth-child(even) {
-  background-color: #ccc;
-  color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    background-color: #ccc;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .grid .g-box:nth-child(odd) img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: auto;
-  height: 50px;
-  width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    height: 50px;
+    width: 50px;
 }
 
 @media (max-width: 509px) {
-#home .grid {
-  width: auto;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 100px 1fr;
-  flex-wrap: wrap;
-  margin: 10px 10px;
- }
+    #home .grid {
+        width: auto;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 100px 1fr;
+        flex-wrap: wrap;
+        margin: 10px 10px;
+    }
 }
 
 @media (min-width: 510px) {
-.grid {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(2, 0.75fr 2.25fr);
-  flex-wrap: wrap;
-  margin: 10px 10px;
- }
+    .grid {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(2, 0.75fr 2.25fr);
+        flex-wrap: wrap;
+        margin: 10px 10px;
+    }
 }
 
 
 @media (min-width: 600px) {
-#contact .grid-cont {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(2, 0.5fr 2.5fr);
-  flex-wrap: wrap;
-  margin: 5px 5px;
- }
+    #contact .grid-cont {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(2, 0.5fr 2.5fr);
+        flex-wrap: wrap;
+        margin: 5px 5px;
+    }
 }
 
 
 @media (max-width: 600px) {
-#contact .grid-cont {
-  width: auto;    
-  display: grid;
-  grid-gap: 5px;
-  grid-template-columns: 40px 1fr;
-  flex-wrap: wrap;
-  margin: 3px 3px;
- }
+    #contact .grid-cont {
+        width: auto;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 40px 1fr;
+        flex-wrap: wrap;
+        margin: 3px 3px;
+    }
 }
 
 .grid-cont .c-box {
-  border: 1px solid black;
-  border-radius: 3px;
-  padding: 2px;
-  font-size: 90%;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 2px;
+    font-size: 90%;
 }
 
 .grid-cont .c-box:nth-child(even) {
-  background-color: #ccc;
-  color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    background-color: #ccc;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .grid-cont .c-box:nth-child(odd) img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: auto;
-  height: 30px;
-  width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    height: 30px;
+    width: 30px;
 }
 
 
 @media (max-width: 370px) {
-#home .motto h2 {
+    #home .motto h2 {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -245,13 +222,6 @@ figcaption {
 }
 
 
-
-/*  .head img {
-    display: flex;
-    justify-content: center;
-}
-*/
-
 body footer div img {
     display: block;
     width: 100%;
@@ -262,4 +232,3 @@ body footer p {
     font-family: 'Roboto', sans-serif;
     font-size: 0.9rem;
 }
-
