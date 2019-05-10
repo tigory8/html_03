@@ -7,7 +7,7 @@ function clock() {
     let minute = time.getMinutes();
     let second = time.getSeconds();
     let temporaryTime = "" + ((hour > 12) ? hour - 12 : hour);
-    if (hour == 0)
+    if (hour === 0)
         temporaryTime = "12";
     temporaryTime += ((minute < 10) ? ":0" : ":") + minute;
     temporaryTime += ((second < 10) ? ":0" : ":") + second;
@@ -26,7 +26,7 @@ function clockToggle(e) {
 }
 
 
-const alertSignal = () => alert('enter the correct value in digits and in the the given renge!');
+const alertSignal = () => alert('enter the correct value in digits and in the given renge!');
 const widthCondition = () => 'Specify the width of the door in the range from 50 to 250 cm';
 const heightCondition = () => 'Specify the width of the door in the range from 150 to 350 cm';
 
@@ -38,6 +38,11 @@ calculation.addEventListener('click', calculationPressed);
 function calculationPressed(e) {
     e.preventDefault();
 
+
+    var electCurrency = 'EUR';
+    const valueSteel = 200;
+    const valueMDF = 150;
+    
     alert('enter the initial data for the calculation!');
     let widthOfDoor = prompt(widthCondition());
     if (isNaN(widthOfDoor)) {
@@ -58,16 +63,19 @@ function calculationPressed(e) {
         alertSignal();
         heightOfDoor = prompt(heightCondition());
     }
-    const valueSteel = 200;
+    
     display.value = widthOfDoor * heightOfDoor / 1000 * valueSteel;
 
 }
+
+
+let currency = prompt('Please enter');
 
 document.querySelector('.exchange-rate').addEventListener('click', exchangeCourse);
 
 function exchangeCourse(e) {
     e.preventDefault();
-    const fromCurrency = 'USD';
+    var fromCurrency = currency;
     const toCurrency = 'UAH';
     const currKey = fromCurrency + '_' + toCurrency;
     fetch(`https://free.currencyconverterapi.com/api/v6/convert?q=${currKey}&compact=ultra&apiKey=bc96fbecdf0ae1153061`)
@@ -78,3 +86,4 @@ function exchangeCourse(e) {
                 .innerText = rate.toFixed(2);
         });
 }
+
