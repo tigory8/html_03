@@ -68,9 +68,9 @@ function calculationPressed(e) {
 
 }
 
-/*
+
 let currency = prompt('Please enter');
-*/
+
 
 document.querySelector('.exchange-rate').addEventListener('click', exchangeCourse);
 
