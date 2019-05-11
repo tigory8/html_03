@@ -68,14 +68,15 @@ function calculationPressed(e) {
 
 }
 
-
+/*
 let currency = prompt('Please enter');
+*/
 
 document.querySelector('.exchange-rate').addEventListener('click', exchangeCourse);
 
 function exchangeCourse(e) {
     e.preventDefault();
-    var fromCurrency = currency;
+    let fromCurrency = currency;
     const toCurrency = 'UAH';
     const currKey = fromCurrency + '_' + toCurrency;
     fetch(`https://free.currencyconverterapi.com/api/v6/convert?q=${currKey}&compact=ultra&apiKey=bc96fbecdf0ae1153061`)
