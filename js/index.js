@@ -27,8 +27,8 @@ function clockToggle(e) {
 
 
 const alertSignal = () => alert('enter the correct value in digits and in the given renge!');
-const widthCondition = () => 'Specify the width of the door in the range from 50 to 250 cm';
-const heightCondition = () => 'Specify the width of the door in the range from 150 to 350 cm';
+const widthCondition = () => 'Specify the width of the door in the range from 70 to 250 cm';
+const heightCondition = () => 'Specify the height of the door in the range from 180 to 350 cm';
 
 
 const display = document.querySelector('.display');
@@ -40,36 +40,38 @@ function calculationPressed(e) {
 
 
     var electCurrency = 'EUR';
-    const valueSteel = 200;
-    const valueMDF = 150;
+    const valueSteel = 400;
+    const valueMDF = 270;
     
     alert('enter the initial data for the calculation!');
     let widthOfDoor = prompt(widthCondition());
-    if (isNaN(widthOfDoor)) {
+    if (isNaN(widthOfDoor) || widthOfDoor === '') {
         alertSignal();
         widthOfDoor = prompt(widthCondition());
     }
-    if (widthOfDoor < 50 || widthOfDoor > 250) {
+    if (widthOfDoor < 70 || widthOfDoor > 250) {
         alertSignal();
         widthOfDoor = prompt(widthCondition());
     }
 
     let heightOfDoor = prompt(heightCondition());
-    if (isNaN(heightOfDoor)) {
+    if (isNaN(heightOfDoor) || heightOfDoor === '') {
         alertSignal();
         heightOfDoor = prompt(heightCondition());
     }
-    if (heightOfDoor < 150 || heightOfDoor > 350) {
+    if (heightOfDoor < 180 || heightOfDoor > 350) {
         alertSignal();
         heightOfDoor = prompt(heightCondition());
     }
     
-    display.value = widthOfDoor * heightOfDoor / 1000 * valueSteel;
+    let currency = prompt('Please specify the currency of settlement, example: USD and push dutton Cource');
+    
+    let square = widthOfDoor * heightOfDoor;
+    
 
-}
+  let costOfDoor = square / 1000 * valueSteel;
 
-
-let currency = prompt('Please enter');
+  display.value = costOfDoor + ' ' + 'UAH';
 
 
 document.querySelector('.exchange-rate').addEventListener('click', exchangeCourse);
@@ -86,9 +88,10 @@ function exchangeCourse(e) {
             document.querySelector('.converter output[name=curr-converted]')
                 .innerText = rate.toFixed(2);
         });
+        
 }
 
-
+}
 
 
 const text = document.querySelector('textarea');
@@ -107,3 +110,4 @@ function saveText(e) {
 function loadText() {
   text.value = localStorage['text'] || '';
 }
+
