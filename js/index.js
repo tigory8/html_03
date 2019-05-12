@@ -41,11 +41,6 @@ const valueMDF = 270;
 function calculationPressed(e) {
     e.preventDefault();
 
-
-    var electCurrency = 'EUR';
-    
-    
-    
     alert('enter the initial data for the calculation!');
     let widthOfDoor = prompt(widthCondition());
     if (isNaN(widthOfDoor) || widthOfDoor === '') {
@@ -66,60 +61,42 @@ function calculationPressed(e) {
         alertSignal();
         heightOfDoor = prompt(heightCondition());
     }
-    
+
     let valueofDoor;
-    
-    let typeOfDoor = prompt('Please specify the type of door: MDF or Steell').toLowerCase();
-    if(typeOfDoor === steell) {
+    let typeOfDoor;
+    typeOfDoor = prompt('Please specify the type of door: MDF or Steell').toLowerCase();
+    if (typeOfDoor === 'steell') {
         valueofDoor = valueSteel;
     }
+    else {
         valueofDoor = valueMDF;
-    
-    
-    let currency = prompt('Please specify the currency of settlement, example: USD and push dutton Cource');
-    
+    }
+
+    let currency = prompt('Please specify the currency of settlement, example: USD and push dutton Cource').toLocaleUpperCase();
+
     let square = widthOfDoor * heightOfDoor;
-    
-
-  let costOfDoor = square / 1000 * valueofDoor;
-
-  display.value = costOfDoor + ' ' + 'UAH';
 
 
-document.querySelector('.exchange-rate').addEventListener('click', exchangeCourse);
+    let costOfDoor = square / 1000 * valueofDoor;
 
-function exchangeCourse(e) {
-    e.preventDefault();
-    let fromCurrency = currency;
-    const toCurrency = 'UAH';
-    const currKey = fromCurrency + '_' + toCurrency;
-    fetch(`https://free.currencyconverterapi.com/api/v6/convert?q=${currKey}&compact=ultra&apiKey=bc96fbecdf0ae1153061`)
-        .then(response => response.json())
-        .then(currency => {
-            const rate = currency[currKey];
-            document.querySelector('.converter output[name=curr-converted]')
-                .innerText = rate.toFixed(2);
-        });
-        
+    display.value = costOfDoor + ' ' + 'UAH';
+
+
+    document.querySelector('.exchange-rate').addEventListener('click', exchangeCourse);
+
+    function exchangeCourse(e) {
+        e.preventDefault();
+        let fromCurrency = currency;
+        const toCurrency = 'UAH';
+        const currKey = fromCurrency + '_' + toCurrency;
+        fetch(`https://free.currencyconverterapi.com/api/v6/convert?q=${currKey}&compact=ultra&apiKey=bc96fbecdf0ae1153061`)
+            .then(response => response.json())
+            .then(currency => {
+                const rate = currency[currKey];
+                document.querySelector('.converter output[name=curr-converted]')
+                    .innerText = rate.toFixed(2);
+            });
+
+    }
+
 }
-
-}
-
-
-const text = document.querySelector('textarea').innerText = `width: ${valueMDF}`;
-
-document.querySelector('input[type=submit]')
-  .addEventListener('click', saveText);
-
-document.querySelector('.load')
-  .addEventListener('click', loadText);
-
-function saveText(e) {
-  e.preventDefault();
-  localStorage['text'] = text.value;
-}
-
-function loadText() {
-  text.value = localStorage['text'] || '';
-}
-
