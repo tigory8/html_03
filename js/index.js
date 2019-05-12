@@ -35,13 +35,16 @@ const display = document.querySelector('.display');
 const calculation = document.querySelector('.calculation');
 calculation.addEventListener('click', calculationPressed);
 
+const valueSteel = 400;
+const valueMDF = 270;
+
 function calculationPressed(e) {
     e.preventDefault();
 
 
     var electCurrency = 'EUR';
-    const valueSteel = 400;
-    const valueMDF = 270;
+    
+    
     
     alert('enter the initial data for the calculation!');
     let widthOfDoor = prompt(widthCondition());
@@ -64,12 +67,21 @@ function calculationPressed(e) {
         heightOfDoor = prompt(heightCondition());
     }
     
+    let valueofDoor;
+    
+    let typeOfDoor = prompt('Please specify the type of door: MDF or Steell').toLowerCase();
+    if(typeOfDoor === steell) {
+        valueofDoor = valueSteel;
+    }
+        valueofDoor = valueMDF;
+    
+    
     let currency = prompt('Please specify the currency of settlement, example: USD and push dutton Cource');
     
     let square = widthOfDoor * heightOfDoor;
     
 
-  let costOfDoor = square / 1000 * valueSteel;
+  let costOfDoor = square / 1000 * valueofDoor;
 
   display.value = costOfDoor + ' ' + 'UAH';
 
@@ -94,7 +106,7 @@ function exchangeCourse(e) {
 }
 
 
-const text = document.querySelector('textarea');
+const text = document.querySelector('textarea').innerText = `width: ${valueMDF}`;
 
 document.querySelector('input[type=submit]')
   .addEventListener('click', saveText);
