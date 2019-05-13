@@ -52,6 +52,28 @@ h3 {
     font-size: 1.2rem;
 }
 
+.container .clock {
+    text-align: right;
+    margin-top: -35px;
+    margin-right: 100px;
+}
+
+@media (max-width: 400px) {
+.container div .clock {
+       text-align: right;
+       margin-top: -35px;
+       margin-right: 25px;
+       font-size: small;
+    }
+}
+
+@media (max-width: 530px) {
+.container .clock {
+       text-align: right;
+       margin-top: -35px;
+       margin-right: 50px;
+    }
+}
 
 header nav ul {
     display: flex;
@@ -128,7 +150,7 @@ header .banner {
         width: auto;
         display: grid;
         grid-gap: 10px;
-        grid-template-columns: 100px 1fr;
+        grid-template-columns: 80px 1fr;
         flex-wrap: wrap;
         margin: 10px 10px;
     }

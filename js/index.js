@@ -15,17 +15,6 @@ function clock() {
     return temporaryTime;
 }
 
-
-const clockToggleButton = document.querySelector('.clockToggle');
-clockToggleButton.addEventListener('click', clockToggle);
-
-function clockToggle(e) {
-    e.preventDefault();
-    clockContainer.hidden = !clockContainer.hidden;
-    clockToggleButton.innerText = clockContainer.hidden ? 'Show Clock' : 'Hide Clock';
-}
-
-
 const alertSignal = () => alert('enter the correct value in digits and in the given renge!');
 const widthCondition = () => 'Specify the width of the door in the range from 70 to 250 cm';
 const heightCondition = () => 'Specify the height of the door in the range from 180 to 350 cm';
