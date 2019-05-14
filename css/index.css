@@ -59,19 +59,19 @@ h3 {
 }
 
 @media (max-width: 400px) {
-.container div .clock {
-       text-align: right;
-       margin-top: -35px;
-       margin-right: 25px;
-       font-size: small;
+    .container div .clock {
+        text-align: right;
+        margin-top: -35px;
+        margin-right: 25px;
+        font-size: small;
     }
 }
 
 @media (max-width: 530px) {
-.container .clock {
-       text-align: right;
-       margin-top: -35px;
-       margin-right: 50px;
+    .container .clock {
+        text-align: right;
+        margin-top: -35px;
+        margin-right: 50px;
     }
 }
 
