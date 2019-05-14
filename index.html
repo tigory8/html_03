@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Brone doors</title>
+    <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
     <link rel="stylesheet" href="css/index.css">
+    <title>Brone doors</title>
 </head>
 
 <body>
@@ -22,8 +23,8 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="#home">Brone Doors</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+                   <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
@@ -207,7 +208,7 @@
                                     <label for="client-comment">Your comment:</label>
                                     <input type="text" placeholder="Additional information" class="form-control" id="client-comment" name="client-comment" required>
                                 </div>
-                                <button type="submit" class="btn btn-dark">Submit</button>
+                                <button type="submit" class="btn btn-primary">Submit</button>
                             </fieldset>
                         </form>
                     </article>
@@ -218,8 +219,8 @@
                 Result: <input type="text" class="display" placeholder="0" readonly name="resultOfCalculation">
             </label>
                             <br>
-                            <button class="calculation btn btn-dark">Calculation</button>
-                            <button class="exchange-rate btn btn-secondary">course UAH to selected currency</button>
+                            <button class="calculation btn btn-primary">Calculation</button>
+                            <button class="exchange-rate btn btn-outline-secondary">course UAH to selected currency</button>
                             <br>
                             <label>
                 <output type="text" name="curr-converted"></output>

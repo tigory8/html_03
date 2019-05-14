@@ -28,6 +28,9 @@ body header div img {
     width: 100%;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 header div.banner h1 {
     text-align: center;
@@ -56,6 +59,7 @@ h3 {
     text-align: right;
     margin-top: -35px;
     margin-right: 100px;
+    color: #000;
 }
 
 @media (max-width: 400px) {
@@ -245,5 +249,5 @@ body footer div img {
 body footer p {
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
